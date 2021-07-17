@@ -29,12 +29,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NewsCard = ({ image, title, description }) => {
+const NewsCard = ({ image, title, description, active }) => {
   const classes = useStyles();
 
   return (
     <div>
-      <Paper className={classes.root} elevation={4}>
+      <Paper
+        className={classes.root}
+        elevation={4}
+        style={{ display: active ? undefined : "none" }}
+      >
         <img className={classes.image} src={image} alt='news' />
         <div className={classes.textSection}>
           <div className={classes.titleSection}>
