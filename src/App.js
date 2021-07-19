@@ -4,6 +4,7 @@ import Header from "./home/header";
 import * as React from "react";
 import Hero from "./home/hero";
 import NewsSection from "./home/newsSection";
+import RecentsSection from "./home/RecentsSection";
 
 const theme = createTheme({
   palette: {
@@ -40,14 +41,21 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: "25,78px",
     },
+    subtitle1: {
+      fontSize: 18,
+      fontWeight: 500,
+    },
     body1: {
       fontSize: 16,
+      fontWeight: 400,
+    },
+    body2: {
+      fontSize: 14,
       fontWeight: 400,
     },
     caption: {
       fontWeight: 200,
       fontSize: 14,
-      lineHeight: 16,
     },
   },
 });
@@ -68,6 +76,7 @@ function App() {
           <Header />
           <Hero />
           <NewsSection />
+          <RecentsSection />
         </div>
       </ThemeProvider>
     </div>

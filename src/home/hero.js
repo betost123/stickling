@@ -5,15 +5,32 @@ import calethea from "../assets/images/calethea.jpg";
 const useStyles = makeStyles((theme) => ({
   heroImage: {
     width: "100%",
-    //background: "rgba(0, 0, 0, .6)",
+  },
+  imageStyle: {
+    objectFit: "cover",
+    width: "100%",
+    height: 550,
+    opacity: 0.4,
+
+    [theme.breakpoints.down("sm")]: {
+      height: 400,
+    },
   },
   heroTitle: {
     fontSize: 96,
     fontWeight: 700,
     color: theme.palette.secondary.main,
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 36,
+    },
   },
   subtitleDescription: {
     color: theme.palette.secondary.main,
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16,
+    },
   },
   textSection: {
     display: "flex",
@@ -22,6 +39,11 @@ const useStyles = makeStyles((theme) => ({
     top: "50%",
     left: "30%",
     transform: "translate(-50%, -50%)",
+
+    [theme.breakpoints.down("sm")]: {
+      top: "30%",
+      left: "50%",
+    },
   },
 }));
 
@@ -33,16 +55,7 @@ const Hero = () => {
     <div>
       <div className={classes.heroImage}>
         <div style={{ background: "rgba(0, 0, 0, .6)" }}>
-          <img
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: 550,
-              opacity: 0.4,
-            }}
-            src={calethea}
-            alt='hero'
-          />
+          <img className={classes.imageStyle} src={calethea} alt='hero' />
         </div>
         <div className={classes.textSection}>
           <Typography className={classes.heroTitle}>STICKLING</Typography>

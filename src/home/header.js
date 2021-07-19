@@ -1,5 +1,6 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { IconButton, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
+import BurgerMenu from "../icons/BurgerMenu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,6 +14,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     "& > * + *": {
       marginLeft: theme.spacing(2),
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  burger: {
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   menu: {
@@ -44,6 +53,11 @@ const Header = () => {
           <Typography variant='h2' className={classes.headerTextColor}>
             Logga in
           </Typography>
+        </div>
+        <div className={classes.burger}>
+          <IconButton>
+            <BurgerMenu />
+          </IconButton>
         </div>
       </div>
     </div>

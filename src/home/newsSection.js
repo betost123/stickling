@@ -1,9 +1,11 @@
-import { makeStyles, Typography } from "@material-ui/core";
+import { IconButton, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import NewsCard from "./components/NewsCard";
 import plantStyling from "../assets/images/plantStyling.jpg";
 import monstera from "../assets/images/monstera.jpg";
 import balcony from "../assets/images/balcony.jpg";
+import LeftArrowButtonIcon from "../icons/LeftArrowButtonIcon";
+import RightArrowButtonIcon from "../icons/RightArrowButtonIcon";
 
 const useStyles = makeStyles((theme) => ({
   newsTitle: {
@@ -37,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 const ButtonSlider = ({ onClick, icon }) => {
   return (
     <div>
-      <button onClick={onClick}>{icon}</button>
+      <IconButton onClick={onClick}>{icon}</IconButton>
     </div>
   );
 };
@@ -75,7 +77,7 @@ const NewsSection = () => {
         Nyheter
       </Typography>
       <div className={classes.sliderContainer}>
-        <ButtonSlider onClick={previousSlide} icon='previous' />
+        <ButtonSlider onClick={previousSlide} icon={<LeftArrowButtonIcon />} />
         <NewsCard
           active={slideIndex === 0 ? true : false}
           image={monstera}
@@ -94,7 +96,7 @@ const NewsSection = () => {
           title='Balkongens blommor'
           description='Dags att piffa upp balkongen? Här är årets guide för att ta just din balkong till nya höjder.'
         />
-        <ButtonSlider onClick={nextSlide} icon='next' />
+        <ButtonSlider onClick={nextSlide} icon={<RightArrowButtonIcon />} />
       </div>
       <div className={classes.dotsPlacement}>
         {Array.from({ length: 3 }).map((item, index) => (
