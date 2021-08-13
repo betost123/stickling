@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
   },
   headerTextColor: {
-    color: theme.palette.secondary.light,
+    color: theme.palette.primary.light,
   },
   menuItems: {
     display: "flex",

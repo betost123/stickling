@@ -5,12 +5,13 @@ import * as React from "react";
 import Hero from "./home/hero";
 import NewsSection from "./home/newsSection";
 import RecentsSection from "./home/RecentsSection";
+import Contact from "./home/Contact";
 
 const theme = createTheme({
   palette: {
     primary: {
       main: "#1A752C",
-      light: "#9BB99E",
+      light: "#DAF9D9",
       dark: "#77A377",
     },
     secondary: {
@@ -75,8 +76,9 @@ function App() {
         <div className={classes.root}>
           <Header />
           <Hero />
-          <NewsSection />
+          {/*<NewsSection />*/}
           <RecentsSection />
+          <Contact />
         </div>
       </ThemeProvider>
     </div>
