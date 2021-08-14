@@ -20,6 +20,7 @@ const Contact = () => {
       <Typography className={classes.title} variant='h1'>
         Kontakt
       </Typography>
+      Ring mig xxx
     </div>
   );
 };

@@ -22,7 +22,7 @@ export const AdData = [
     price: 200,
     location: "Göteborg",
   },
-  {
+  /*{
     id: uuidv4(),
     img: "../assets/images/calethea.jpg",
     title: "Zebrablad",
@@ -42,5 +42,5 @@ export const AdData = [
     title: "Alocasia",
     price: 290,
     location: "Linköping",
-  },
+  },*/
 ];

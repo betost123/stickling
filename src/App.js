@@ -3,7 +3,6 @@ import { createTheme, makeStyles, ThemeProvider } from "@material-ui/core";
 import Header from "./home/header";
 import * as React from "react";
 import Hero from "./home/hero";
-import NewsSection from "./home/newsSection";
 import RecentsSection from "./home/RecentsSection";
 import Contact from "./home/Contact";
 
@@ -29,6 +28,9 @@ const theme = createTheme({
     },
     background: {
       grey: "#F1F1EE",
+    },
+    common: {
+      white: "#FFFFFF",
     },
   },
   typography: {

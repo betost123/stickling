@@ -10,6 +10,11 @@ const useStyles = makeStyles((theme) => ({
   },
   adSection: {
     padding: theme.spacing(2),
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    marginLeft: theme.spacing(5),
+    marginBottom: theme.spacing(4),
   },
 }));
 
