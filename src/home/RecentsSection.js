@@ -1,6 +1,6 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import AdCard from "./components/AdCard";
+import AdCardMobile from "./components/AdCardMobile";
 import { AdData } from "./data";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    marginLeft: theme.spacing(5),
     marginBottom: theme.spacing(4),
   },
   sticklingFiestaIcon: {
@@ -50,7 +49,7 @@ const RecentsSection = () => {
         <Grid container spacing={2}>
           {AdData.map((ad) => (
             <Grid key={ad.id} item md={4} xs={12}>
-              <AdCard
+              <AdCardMobile
                 img={ad.img}
                 title={ad.title}
                 price={ad.price}

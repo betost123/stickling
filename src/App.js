@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  const [logInModalOpen, setLogInModalOpen] = React.useState(true);
+  const [logInModalOpen, setLogInModalOpen] = React.useState(false);
 
   return (
     <div>
