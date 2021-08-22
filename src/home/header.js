@@ -68,10 +68,14 @@ const MenuItem = ({ title, onClick, selected }) => {
 const LogInButton = ({ onClick }) => {
   const classes = useStyles();
 
-  return <Button className={classes.logInButton}>Logga in</Button>;
+  return (
+    <Button className={classes.logInButton} onClick={onClick}>
+      Logga in
+    </Button>
+  );
 };
 
-const Header = () => {
+const Header = ({ onClickLogIn }) => {
   const classes = useStyles();
   const menuItems = ["Hem", "Annonser", "Om oss", "Kontakt"];
 
@@ -87,7 +91,7 @@ const Header = () => {
           {menuItems.map((menuItem) => (
             <MenuItem title={menuItem} selected={selected} />
           ))}
-          <LogInButton />
+          <LogInButton onClick={onClickLogIn} />
         </div>
         <div className={classes.burger}>
           <IconButton>

@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "cover",
     width: "100%",
     height: 550,
-    opacity: 0.4,
+    //opacity: 0.4,
+    filter: "brightness(60%)",
 
     [theme.breakpoints.down("sm")]: {
       height: 400,

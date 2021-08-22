@@ -5,6 +5,7 @@ import * as React from "react";
 import Hero from "./home/hero";
 import RecentsSection from "./home/RecentsSection";
 import Contact from "./home/Contact";
+import LogInModal from "./home/components/LogInModal";
 
 const theme = createTheme({
   palette: {
@@ -20,11 +21,13 @@ const theme = createTheme({
     },
     warning: {
       main: "#FD8B7C",
+      light: "#FC8C78",
     },
     info: {
       light: "#F1F1EE",
       main: "#F1F1EE",
       dark: "#F1F1E8",
+      text: "#A1AFA0",
     },
     background: {
       grey: "#F1F1EE",
@@ -60,6 +63,11 @@ const theme = createTheme({
       fontWeight: 200,
       fontSize: 14,
     },
+    overline: {
+      fontWeight: 300,
+      fontSize: 14,
+      letterSpacing: "0.1em",
+    },
   },
 });
 
@@ -71,16 +79,21 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
+  const [logInModalOpen, setLogInModalOpen] = React.useState(true);
 
   return (
     <div>
       <ThemeProvider theme={theme}>
         <div className={classes.root}>
-          <Header />
+          <Header onClickLogIn={() => setLogInModalOpen(true)} />
           <Hero />
           {/*<NewsSection />*/}
           <RecentsSection />
           <Contact />
+          <LogInModal
+            isOpen={logInModalOpen}
+            handleClose={() => setLogInModalOpen(false)}
+          />
         </div>
       </ThemeProvider>
     </div>
